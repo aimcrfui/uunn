@@ -14,7 +14,7 @@ if ($trigger == "button") await httpAPI("/v1/dns/flush");
 $done({
     title:"𝗦𝗨𝗥𝗚𝗘 已运行"+startTime,
     content:"Mitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
-    icon: "power.circle",
+    icon: "network",
    "icon-color":"#965454"
     
 });
