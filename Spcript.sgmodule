@@ -1,3 +1,6 @@
+#!name=Panels
+#!desc=显示卡片开关
+
 [Panel]
 # > Panel
 策略面板 = script-name=功能开关, update-interval=30
