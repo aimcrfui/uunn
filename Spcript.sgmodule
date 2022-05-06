@@ -4,4 +4,4 @@
 
 [Script]
 # > 策略面板
-功能开关 = type=generic,timeout=15,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/functionstatus.js
+功能开关 = type=generic,timeout=15,script-path=https://raw.githubusercontent.com/aimcrfui/uunn/main/functionstatus.js
