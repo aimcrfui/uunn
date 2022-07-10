@@ -1,8 +1,3 @@
-/**
- * 为 VMess WebSocket 节点修改混淆 host
- * 示例
- * #host=google.com
- */
 function operator(proxies) {
     const { host } = $arguments;
     proxies.forEach(p => {
@@ -12,7 +7,12 @@ function operator(proxies) {
             p["ws-opts"]["headers"]["Host"] = host;
         }
     });
-    
+
+    newFunction(proxies, host);
+    return proxies;
+}
+
+function newFunction(proxies, host) {
     proxies.forEach(h => {
         if (h.type === 'vmess' && h.network === 'http') {
             h["http-opts"] = h["http-opts"] || {};
@@ -20,5 +20,4 @@ function operator(proxies) {
             h["http-opts"]["headers"]["Host"] = host;
         }
     });
-    return proxies;
 }
