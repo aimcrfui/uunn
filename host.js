@@ -7,13 +7,13 @@ function operator(proxies) {
             p["ws-opts"]["headers"]["Host"] = host;
         }
     });
-
-    newFunction(proxies, host);
+    operator2(proxies);
     return proxies;
 }
 
-function newFunction(proxies, host) {
+function operator2(proxies) {
     proxies.forEach(h => {
+        const { host } = $arguments;
         if (h.type === 'vmess' && h.network === 'http') {
             h["http-opts"] = h["http-opts"] || {};
             h["http-opts"]["headers"] = h["http-opts"]["headers"] || {};
