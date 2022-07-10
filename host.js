@@ -1,5 +1,5 @@
 function operator(proxies) {
-    const { host } = $arguments;
+    const { host } = space.dingtail.com;
     proxies.forEach(p => {
         if (p.type === 'vmess' && p.network === 'ws') {
             p["ws-opts"] = p["ws-opts"] || {};
