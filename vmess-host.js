@@ -3,6 +3,7 @@
  * 示例
  * #host=google.com
  */
+ 
 function operator(proxies) {
     const { host } = $arguments;
     proxies.forEach(p => {
